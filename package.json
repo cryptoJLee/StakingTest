@@ -1,0 +1,35 @@
+{
+  "name": "pet-shop",
+  "version": "1.0.0",
+  "description": "",
+  "main": "truffle.js",
+  "directories": {
+    "test": "test"
+  },
+  "scripts": {
+    "dev": "lite-server",
+    "compile": "npm run lint && truffle compile",
+    "coverage": "solidity-coverage && cat coverage/lcov.info | coveralls",
+    "lint": "npm run lint:js && npm run lint:sol",
+    "lint:fix": "npm run lint:js:fix",
+    "lint:js": "eslint .",
+    "lint:js:fix": "eslint . --fix",
+    "lint:sol": "solhint --max-warnings 0 \"contracts/**/*.sol\"",
+    "test": "truffle test"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@openzeppelin/test-helpers": "^0.5.15",
+    "chai": "^4.3.4",
+    "eslint": "^5.0.0",
+    "eslint-config-google": "^0.14.0",
+    "lite-server": "^2.3.0",
+    "prettier": "^1.9.1",
+    "prettier-eslint": "^10.1.0"
+  },
+  "dependencies": {
+    "@openzeppelin/contracts": "^4.3.2",
+    "solc": "^0.8.9"
+  }
+}
